@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       // showPerformanceOverlay: true,
       title: "Vishal Balani",
       routes: routes,
-      initialRoute: RouteName.splash,
+      initialRoute: RouteName.home,
       onUnknownRoute: (settings) {
         return MaterialPageRoute(
           builder: (context) => const PageNotFoundView(),
