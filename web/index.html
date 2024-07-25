@@ -42,7 +42,7 @@ body, html {
     z-index: 9999;
 }
 #greeting {
-    font-size: 48px;
+    font-size: 48px; /* Default size for larger screens */
     opacity: 1;
     transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
 }
@@ -52,6 +52,33 @@ body, html {
 }
 .slide-up {
     animation: slideUp 1s ease-in-out forwards;
+}
+
+/* Responsive font sizes */
+@media (max-width: 1200px) {
+    #greeting {
+        font-size: 42px;
+    }
+}
+@media (max-width: 992px) {
+    #greeting {
+        font-size: 36px;
+    }
+}
+@media (max-width: 768px) {
+    #greeting {
+        font-size: 30px;
+    }
+}
+@media (max-width: 576px) {
+    #greeting {
+        font-size: 24px;
+    }
+}
+@media (max-width: 400px) {
+    #greeting {
+        font-size: 20px;
+    }
 }
 </style>
 </head>
@@ -70,7 +97,7 @@ const greetingElement = document.getElementById('greeting');
 function changeGreeting() {
     greetingElement.style.opacity = '0';
     greetingElement.style.transform = 'translateY(10px)';
-    
+
     setTimeout(() => {
         greetingElement.textContent = `• ${greetings[currentIndex]}`;
         greetingElement.style.opacity = '1';
@@ -87,7 +114,7 @@ setTimeout(() => {
         clearInterval(intervalId);
         const splash = document.getElementById('splash');
         splash.classList.add('slide-up');
-        
+
         splash.addEventListener('animationend', () => {
             splash.remove();
         }, { once: true });
@@ -101,7 +128,7 @@ setTimeout(() => {
             setInterval(changeGreeting, 500);
         }
     });
-}, 400); // Start after 500ms to ensure smooth initial render
+}, 400); // Start after 400ms to ensure smooth initial render
 </script>
 <script src="flutter_bootstrap.js" async></script>
 </body>
