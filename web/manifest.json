@@ -1,11 +1,11 @@
 {
-    "name": "vishalbalani",
-    "short_name": "vishalbalani",
+    "name": "Vishal Balani",
+    "short_name": "Vishal Balani",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Vishal Balani's portfolio website. Showcasing innovative web and mobile development projects, blending creativity with technical expertise.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
