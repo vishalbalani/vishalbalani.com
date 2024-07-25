@@ -91,7 +91,7 @@ setTimeout(() => {
         splash.addEventListener('animationend', () => {
             splash.remove();
         }, { once: true });
-    }, 3500); // 3.5 seconds before slide up
+    }, 3000); // 3 seconds before slide up
 
     // Optimize performance
     document.addEventListener('visibilitychange', () => {
@@ -101,7 +101,7 @@ setTimeout(() => {
             setInterval(changeGreeting, 500);
         }
     });
-}, 500); // Start after 500ms to ensure smooth initial render
+}, 400); // Start after 500ms to ensure smooth initial render
 </script>
 <script src="flutter_bootstrap.js" async></script>
 </body>
